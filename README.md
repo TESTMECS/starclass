@@ -46,14 +46,14 @@ Embedding this information would not be beneficial. Consider a situation where t
 - **R (Result, 15% of speaking time)**: $` 750 \times 0.15 = 112.5 \text{ words} `$
 ### Average Sentence Length
 #### For 3 Minutes (750 Words):
- **S (Situation)**:
- Words: ~112.5, Estimate of 4 sentences, Sentences: $` 112.5 \div 4 \approx \text{28 words per sentence} `$
- **T (Task)**:
-Estimate of 3 sentences, Words: ~75 $` 75 \div 3 \approx \text{25 words per sentence} `$
-**A (Action)**:
-Estimate of 10 sentences, Words: ~450 $` 450 \div 10 \approx \text{45 words per sentence} `$
-**R (Result)**:
-Estimate of 4 sentences $` 112.5 \div 4 \approx \text{28 words per sentence} `$
+ - **S (Situation)**:
+	 - Words: ~112.5, Estimate of 4 sentences, Sentences: $` 112.5 \div 4 \approx \text{28 words per sentence} `$
+- **T (Task)**:
+	- Estimate of 3 sentences, Words: ~75 $` 75 \div 3 \approx \text{25 words per sentence} `$
+- **A (Action)**:
+	- Estimate of 10 sentences, Words: ~450 $` 450 \div 10 \approx \text{45 words per sentence} `$
+- **R (Result)**:
+	- Estimate of 4 sentences $` 112.5 \div 4 \approx \text{28 words per sentence} `$
 ### Actual Average Sentence Length for our data 
 ![usage3.png](plots/usage3.png)
 For technical documents or detailed explanations, 27.55 words per sentence works well as it allows for detailed, precise communication. For casual or conversational writing [2](https://insidegovuk.blog.gov.uk/2014/08/04/sentence-length-why-25-words-is-our-limit/), this may feel too dense, requiring adjustments toward shorter sentences.
@@ -69,7 +69,7 @@ We are going to remove some of the outliers for **all labels excluding Action** 
 ![usage9.png](plots/usage9.png)
 Our data might not look that much different, and that is because we've only removed 5 pieces of data.
 ![usage10.png](plots/usage10.png)
-The new average sentence length is now $$ \approx 26.55$$
+The new average sentence length is now $` \approx 26.55 `$
 ![usage11.png](plots/usage11.png)
 While I could continue to lower the average more this would likely cause me two have to attack some of the longer sentences in the `Action` column. Not only were those examples hard to find, I don't want to restrict the amount of data our model has to be trained on otherwise it won't preform the task we want reliably.   
 # What Is Loss?
