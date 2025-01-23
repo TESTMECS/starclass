@@ -1,10 +1,10 @@
 The goal of this project is to evaluate the performance of a multiclass machine learning model trained using the baseline BERT model (2018) compared against the advanced Modern BERT model (2025) on the task of classifying sentences as either Situation, Task, Action, or Response in the context of a interview. 
 
-[What is STAR?](#What is STAR?)
-[Why not use LLMs?](#Why not use LLMs?)
-[What is it Trained on?](#What is it Trained on?)
-[What is [Modern Bert?](https //huggingface.co/blog/modernbert)](#What is [Modern Bert?](https //huggingface.co/blog/modernbert))
-[Why use this for our project?](#Why use this for our project?)
+[What is STAR?](#What-is-STAR?)
+[Why not use LLMs?](#Why-not-use-LLMs?)
+[What is it Trained on?](#What-is-it-Trained-on?)
+[What is Modern Bert](#What-is-ModernBERT?)
+[Why use this for our project?](#Why-use-this-for-our-project?)
 [Usage](#Usage)
 [References](#References)
 
@@ -188,7 +188,7 @@ The following shows the parameters with the best metrics.
     "output_dir": "./tuning_results/run_20250120_182703"
   },
 ```
-# What is [Modern Bert?](https://huggingface.co/blog/modernbert)
+# What is ModernBERT?
 The above post explains how Modern Bert works but is, "available as a _slot-in_ replacement for any BERT-like models, with both a **base** (149M params) and **large** (395M params) model size." [5](https://huggingface.co/blog/modernbert) 
 The majority of improvements are going to come in performance. Modern BERT takes advantage of libraries like `flash-attn` which can speed up training and response. Other improvements like more input tokens (8192 v BERT's limited 512) will be useful for longer responses, we would have to cap responses otherwise.  
 # Why use this for our project?
