@@ -1,12 +1,12 @@
 The goal of this project is to evaluate the performance of a multiclass machine learning model trained using the baseline BERT model (2018) compared against the advanced Modern BERT model (2025) on the task of classifying sentences as either Situation, Task, Action, or Response in the context of a interview. 
 
-[[#What is STAR?]]
-[[#Why not use LLMs?]]
-[[#What is it Trained on?]]
-[[#What is [Modern Bert?](https //huggingface.co/blog/modernbert)]]
-[[#Why use this for our project?]]
-[[#Usage]]
-[[#References]]
+[What is STAR?](#What is STAR?)
+[Why not use LLMs?](#Why not use LLMs?)
+[What is it Trained on?](#What is it Trained on?)
+[What is [Modern Bert?](https //huggingface.co/blog/modernbert)](#What is [Modern Bert?](https //huggingface.co/blog/modernbert))
+[Why use this for our project?](#Why use this for our project?)
+[Usage](#Usage)
+[References](#References)
 
 # What is STAR?
 The STAR method is a structured interview technique where job candidates answer behavioral questions by describing a specific **Situation**, **Task**, **Action**, and **Result** to demonstrate their skills and problem-solving abilities. [Read More](https://www.uxdesigninstitute.com/blog/what-is-the-star-method/)
