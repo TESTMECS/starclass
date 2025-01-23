@@ -137,12 +137,12 @@ Most of the other methods of lowering the *Loss* come with Training including
 - *Example*: For "Action" class, precision of 0.95 means that when the model predicts something is an "Action", it's correct 95% of the time on the test set of data. 
 ### Recall
 - Measures how many *true positives* were found in total. 
-- Precision is $$ \text{True positives} / \text{(True Positives + False Positives)} $$
-- While *Recall is* $$ \text{True Positives} / \text{(True Positives + False Negatives)} $$
+- Precision is $` \text{True positives} / \text{(True Positives + False Positives)} `$
+- While *Recall is* $` \text{True Positives} / \text{(True Positives + False Negatives)} `$
 - *Example*: For "Action" class, recall of 1.00 means it found 100% of all actual Action instances. 
 ### F1-Score
 - Harmonic mean of precision and recall
-- $$ 2*\text{Percision * Recall} / (Precision + Recall) $$
+- $` 2*\text{Percision * Recall} / (Precision + Recall) `$
 - *Example:* Action's F1 of 0.97 indicates strong balance between precision and recall.
 - Brings both Recall and Precision into a single score. Is often used for quick comparison. 
 ### Confusion Matrix 
