@@ -40,10 +40,10 @@ For example:
 	4. Result = 15% of the time. 
 Embedding this information would not be beneficial. Consider a situation where the user explains the *Situation* or setup for a problem and quickly saying "*I solved it*" for the *Action*. The ideal performance of our model would be that the user achieved all parts of *STAR* response. However, in this situation the model might incorrectly classify the *Situation* as *Action* as a result of the length. By splitting the classification up into sentences. This gives both the *user and model* a clear frame work for making sure the user has at least one element of the *STAR response*, we can later comment on the number of sentences classified to determine the mentions to the speaking time. 
 #### For 3 Minutes of Speaking time (750 Words):
-- **S (Situation, 15% of speaking time)**: $$ 750 \times 0.15 = 112.5 \text{ words} $$
-- **T (Task, 10% of speaking time)**: $$ 750 \times 0.10 = 75 \text{ words} $$
-- **A (Action, 60 % of speaking time)**: $$  750 \times 0.60 = 450 \text{ words} $$
-- **R (Result, 15% of speaking time)**: $$ 750 \times 0.15 = 112.5 \text{ words} $$
+- **S (Situation, 15% of speaking time)**: $` 750 \times 0.15 = 112.5 \text{ words} `$
+- **T (Task, 10% of speaking time)**: $` 750 \times 0.10 = 75 \text{ words} `$
+- **A (Action, 60 % of speaking time)**: $`  750 \times 0.60 = 450 \text{ words} `$
+- **R (Result, 15% of speaking time)**: $` 750 \times 0.15 = 112.5 \text{ words} `$
 ### Average Sentence Length
 #### For 3 Minutes (750 Words):
  **S (Situation)**:
