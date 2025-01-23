@@ -67,10 +67,10 @@ We are going to remove some of the outliers for **all labels excluding Action** 
 ![usage7.png](plots/usage7.png)
 ![usage8.png](plots/usage8.png)
 ![usage9.png](plots/usage9.png)
-Our data might not look that much different, and that is because we've only removed 5 pieces of data.
-![usage10.png](plots/usage10.png)
-The new average sentence length is now $` \approx 26.55 `$
-![usage11.png](plots/usage11.png)
+- Our data might not look that much different, and that is because we've only removed 5 pieces of data.
+- ![usage10.png](plots/usage10.png)
+- The new average sentence length is now $` \approx 26.55 `$
+- ![usage11.png](plots/usage11.png)
 While I could continue to lower the average more this would likely cause me two have to attack some of the longer sentences in the `Action` column. Not only were those examples hard to find, I don't want to restrict the amount of data our model has to be trained on otherwise it won't preform the task we want reliably.   
 # What Is Loss?
 Loss is a measure of how wrong your model's predictions are compared to the correct answers. For a model like BERT, loss tells it how well it’s learning to understand and analyze text.
