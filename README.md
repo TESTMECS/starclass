@@ -24,10 +24,10 @@ While LLMs show promise in complex classification tasks, their use presents chal
 ## Exploratory Data Analysis (EDA)
 ### Basic Information
 Showing `319` examples in both categories, no missing values. 
-![[plots/usage1.png]]
+![usage1.png](plots/usage1.png)
 ### DataFrame
 The graph shows the distribution of labels and their count. Every category of sentence has 80 examples except Action having 79 examples. 
-![[plots/usage2.png]]
+![usage2.png](plots/usage2.png)
 ## Sentence Length. 
 The average talking time in 1 minute is **125-250 words**.
 Assuming the user talks for around **3-5 minutes** per response.
@@ -55,22 +55,22 @@ Estimate of 10 sentences, Words: ~450 $$ 450 \div 10 \approx \text{45 words per 
 **R (Result)**:
 Estimate of 4 sentences $$ 112.5 \div 4 \approx \text{28 words per sentence} $$
 ### Actual Average Sentence Length for our data 
-![[plots/usage3.png]] 
+![usage3.png](plots/usage3.png)
 For technical documents or detailed explanations, 27.55 words per sentence works well as it allows for detailed, precise communication. For casual or conversational writing [2](https://insidegovuk.blog.gov.uk/2014/08/04/sentence-length-why-25-words-is-our-limit/), this may feel too dense, requiring adjustments toward shorter sentences.
 The Following Figure shows the distribution of sentence lengths. 
-![[plots/usage5.png]]
+![usage5.png](plots/usage5.png)
 The following figure splits this up by label. 
-![[plots/usage4.png]]
-![[usage6.png]]
+![usage4.png](plots/usage4.png)
+![usage6.png](plots/usage6.png)
 ### Fixes 
 We are going to remove some of the outliers for **all labels excluding Action** as they likely skew the data for one of the smaller parts of the response. I will use a common value of marking a Z score of more than -3 or 3 Standard Deviations away from the mean being outliers. I will discard those from the data sets to get the average sentence length down. 
-![[plots/usage7.png]]
-![[plots/usage8.png]]
-![[plots/usage9.png]]
+![usage7.png](plots/usage7.png)
+![usage8.png](plots/usage8.png)
+![usage9.png](plots/usage9.png)
 Our data might not look that much different, and that is because we've only removed 5 pieces of data.
-![[plots/usage10.png]]
+![usage10.png](plots/usage10.png)
 The new average sentence length is now $$ \approx 26.55$$
-![[plots/usage11.png]]
+![usage11.png](plots/usage11.png)
 While I could continue to lower the average more this would likely cause me two have to attack some of the longer sentences in the `Action` column. Not only were those examples hard to find, I don't want to restrict the amount of data our model has to be trained on otherwise it won't preform the task we want reliably.   
 # What Is Loss?
 Loss is a measure of how wrong your model's predictions are compared to the correct answers. For a model like BERT, loss tells it how well it’s learning to understand and analyze text.
@@ -130,7 +130,7 @@ Most of the other methods of lowering the *Loss* come with Training including
 - BERT embeds contextual information between words in sentences automating the goal of labeling the sentence based on the context. 
 ## Evaluation Metrics for BERT
 ### Classification Report 
-![[plots/usage12.png]]
+![usage12.png](plots/usage12.png)
 ### Precision
 - Measures how many of our *predicted positives* were *true positives*
 - High precision means a low rate of false positives. 
@@ -147,8 +147,8 @@ Most of the other methods of lowering the *Loss* come with Training including
 - Brings both Recall and Precision into a single score. Is often used for quick comparison. 
 ### Confusion Matrix 
 The *Confusion Matrix* summarizes the predictions by showing the counts of true positives (correctly predicted positives), true negatives (correctly predicted negatives), false positives (incorrectly predicted positives), and false negatives (incorrectly predicted negatives). For example in the following figure, the *Task* label was incorrectly classified as *Action* once and as *Situation* 2 times and correctly classified 13 times. This example is before we took our *outliers* out of the data. The second figure shows the after. 
-![[plots/usage13.png]]
-![[plots/usage14.png]]
+![usage13.png](plots/usage13.png)
+![usage14.png](plots/usage14.png)
 Still Some false positives for *Situation*, however each label is a lot more even now. 
 ### Experimental Setup
 - **Preprocessing**:
