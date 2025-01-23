@@ -1,0 +1,12 @@
+__pycache__/
+starclass_modernbert/.venv
+starclass_bert/.venv
+star_bert/starclass_bert
+starclass_modernbert/starclass_modernbert
+starclass_bert/uv.lock
+starclass_modernbert/uv.lock
+starclass_bert/.env
+starclass_modernbert/.env
+starclass_bert/.venv
+starclass_modernbert/.venv
+
