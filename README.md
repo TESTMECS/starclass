@@ -47,13 +47,13 @@ Embedding this information would not be beneficial. Consider a situation where t
 ### Average Sentence Length
 #### For 3 Minutes (750 Words):
  **S (Situation)**:
- Words: ~112.5, Estimate of 4 sentences, Sentences: $$ 112.5 \div 4 \approx \text{28 words per sentence} $$
+ Words: ~112.5, Estimate of 4 sentences, Sentences: $` 112.5 \div 4 \approx \text{28 words per sentence} `$
  **T (Task)**:
-Estimate of 3 sentences, Words: ~75 $$ 75 \div 3 \approx \text{25 words per sentence} $$
+Estimate of 3 sentences, Words: ~75 $` 75 \div 3 \approx \text{25 words per sentence} `$
 **A (Action)**:
-Estimate of 10 sentences, Words: ~450 $$ 450 \div 10 \approx \text{45 words per sentence} $$
+Estimate of 10 sentences, Words: ~450 $` 450 \div 10 \approx \text{45 words per sentence} `$
 **R (Result)**:
-Estimate of 4 sentences $$ 112.5 \div 4 \approx \text{28 words per sentence} $$
+Estimate of 4 sentences $` 112.5 \div 4 \approx \text{28 words per sentence} `$
 ### Actual Average Sentence Length for our data 
 ![usage3.png](plots/usage3.png)
 For technical documents or detailed explanations, 27.55 words per sentence works well as it allows for detailed, precise communication. For casual or conversational writing [2](https://insidegovuk.blog.gov.uk/2014/08/04/sentence-length-why-25-words-is-our-limit/), this may feel too dense, requiring adjustments toward shorter sentences.
