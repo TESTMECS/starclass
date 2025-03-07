@@ -32,7 +32,7 @@ The graph shows the distribution of labels and their count. Every category of se
 The average talking time in 1 minute is **125-250 words**.
 Assuming the user talks for around **3-5 minutes** per response.
 ### STAR method frequency 
-The star respond frame work specifies that some labels should be longer than others. 
+The star respond frame-work specifies that some labels should be longer than others. 
 For example:
 	1. Situation = 15% of the response. 
 	2. Task = 10% of speaking time. 
@@ -45,17 +45,18 @@ Embedding this information would not be beneficial. Consider a situation where t
 - **A (Action, 60 % of speaking time)**: $`  750 \times 0.60 = 450 \text{ words} `$
 - **R (Result, 15% of speaking time)**: $` 750 \times 0.15 = 112.5 \text{ words} `$
 ### Average Sentence Length
-#### For 3 Minutes (750 Words):
+#### For 3 Minutes (750 Words total):
  - **S (Situation)**:
-	 - Words: ~112.5, Estimate of 4 sentences, Sentences: $` 112.5 \div 4 \approx \text{28 words per sentence} `$
+	 - With an estimate of 4 sentences, Sentences: $` 112.5 \div 4 \approx \text{28 words per sentence} `$
 - **T (Task)**:
-	- Estimate of 3 sentences, Words: ~75 $` 75 \div 3 \approx \text{25 words per sentence} `$
+	- With an estimate of 3 sentences, Words: ~75 $` 75 \div 3 \approx \text{25 words per sentence} `$
 - **A (Action)**:
-	- Estimate of 10 sentences, Words: ~450 $` 450 \div 10 \approx \text{45 words per sentence} `$
+	- With an estimate of 10 sentences, Words: ~450 $` 450 \div 10 \approx \text{45 words per sentence} `$
 - **R (Result)**:
-	- Estimate of 4 sentences $` 112.5 \div 4 \approx \text{28 words per sentence} `$
+	- With an estimate of 4 sentences $` 112.5 \div 4 \approx \text{28 words per sentence} `$
 ### Actual Average Sentence Length for our data 
 ![usage3.png](plots/usage3.png)
+
 For technical documents or detailed explanations, 27.55 words per sentence works well as it allows for detailed, precise communication. For casual or conversational writing [2](https://insidegovuk.blog.gov.uk/2014/08/04/sentence-length-why-25-words-is-our-limit/), this may feel too dense, requiring adjustments toward shorter sentences.
 The Following Figure shows the distribution of sentence lengths. 
 ![usage5.png](plots/usage5.png)
@@ -71,6 +72,7 @@ We are going to remove some of the outliers for **all labels excluding Action** 
 - ![usage10.png](plots/usage10.png)
 - The new average sentence length is now $` \approx 26.55 `$
 - ![usage11.png](plots/usage11.png)
+
 While I could continue to lower the average more this would likely cause me two have to attack some of the longer sentences in the `Action` column. Not only were those examples hard to find, I don't want to restrict the amount of data our model has to be trained on otherwise it won't preform the task we want reliably.   
 # What Is Loss?
 Loss is a measure of how wrong your model's predictions are compared to the correct answers. For a model like BERT, loss tells it how well it’s learning to understand and analyze text.
@@ -83,7 +85,7 @@ Low loss means the model is doing a good job.
     - If the prediction is close, the loss is small.
     - If it’s way off, the loss is large.
 ### Methods for Lowering Loss
-Already done is **removing outliers** which focuses the model on learning from typical data. Make loss smaller and more stable. Help the model train faster and generalize better to unseen data.
+Already done is **removing outliers** which focuses the model on learning from typical data which makes loss smaller and more stable. This helps the model train faster and generalize better to unseen data.
 #### Data Preprocessing
  *Remove stopwords/puncuations* - words like `uhh` `umm` or even `the` `in`.  These words might cause *noise* which could distort the model and lead to inaccurate conclusions. The process of *Text Normalization* which also involves correct spelling and removing extra spaces and characters would be useful
  Luckily the previous students left us with some legacy code for the API *AssemblyAI*. The following code preprocesses the text for special characters, numbers, symbols and replaces them with spaces. The stopword removal function takes a pre-made list of `stopwords.words` and replaces them with spaces. 
@@ -110,14 +112,15 @@ def _stopword(string):
     return " ".join(a)
 ```
 #### Training
-Most of the other methods of lowering the *Loss* come with Training including 
-	1. *Hyperparameter Tuning*
-		- Learning Rate optimization
-		- Batch Size optimization
-	2. *Tokenization*
-		- Often done for us by the `AutoTokenizer` from HuggingFace 
-	3. *Early Stopping*
-		1. Stop when loss stops improving. 
+Most of the other methods of lowering the *Loss* come with Training including
+
+1. *Hyperparameter Tuning*
+	- Learning Rate optimization
+	- Batch Size optimization
+2. *Tokenization*
+	- Often done for us by the `AutoTokenizer` from HuggingFace 
+3. *Early Stopping*
+	- Stop when loss stops improving. 
 
 # What is BERT?
 - BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained deep learning model developed by Google.
