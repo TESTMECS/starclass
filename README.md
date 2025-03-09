@@ -5,6 +5,7 @@ The goal of this project is to evaluate the performance of a multiclass machine 
 - [What is it Trained on?](#What-is-it-Trained-on?)
 - [What is Modern Bert](#What-is-ModernBERT?)
 - [Why use this for our project?](#Why-use-this-for-our-project?)
+- [Conclusion](#Conclusion)
 - [Usage](#Usage)
 - [References](#References)
 
