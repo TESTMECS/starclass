@@ -149,8 +149,9 @@ Most of the other methods of lowering the *Loss* come with Training including
 - *Example:* Action's F1 of 0.97 indicates strong balance between precision and recall.
 - Brings both Recall and Precision into a single score. Is often used for quick comparison. 
 ### Confusion Matrix 
-The *Confusion Matrix* summarizes the predictions by showing the counts of true positives (correctly predicted positives), true negatives (correctly predicted negatives), false positives (incorrectly predicted positives), and false negatives (incorrectly predicted negatives). For example in the following figure, the *Task* label was incorrectly classified as *Action* once and as *Situation* 2 times and correctly classified 13 times. This example is before we took our *outliers* out of the data. The second figure shows the after. 
+The *Confusion Matrix* summarizes the predictions by showing the counts of true positives (correctly predicted positives), true negatives (correctly predicted negatives), false positives (incorrectly predicted positives), and false negatives (incorrectly predicted negatives). For example in the following figure, the *Task* label was incorrectly classified as *Action* once and as *Situation* 2 times and correctly classified 13 times. This example is before we took our *outliers* out of the data.
 ![usage13.png](plots/usage13.png)
+The second figure shows the after *outliers* were taken out of the data
 ![usage14.png](plots/usage14.png)
 Still Some false positives for *Situation*, however each label is a lot more even now. 
 ### Experimental Setup
