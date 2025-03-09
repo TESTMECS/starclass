@@ -1,11 +1,11 @@
 The goal of this project is to evaluate the performance of a multiclass machine learning model trained using the baseline BERT model (2018) compared against the advanced Modern BERT model (2025) on the task of classifying sentences as either Situation, Task, Action, or Response in the context of a interview. 
 
-- [What is STAR?](#What-is-STAR?)
-- [Why not use LLMs?](#Why-not-use-LLMs?)
-- [What is it Trained on?](#What-is-it-Trained-on?)
-- [What is Modern Bert](#What-is-ModernBERT?)
-- [Why use this for our project?](#Why-use-this-for-our-project?)
-- [Conclusion](#Conclusion)
+- [What is STAR?](#what-is-star)
+- [Why not use LLMs?](#why-not-use-llms)
+- [What is it Trained on?](#what-is-it-trained-on)
+- [What is Modern Bert](#what-is-modern-bert)
+- [Why use this for our project?](#why-use-this-for-our-project)
+- [Conclusion](#conclusion)
 - [Usage](#Usage)
 - [References](#References)
 
