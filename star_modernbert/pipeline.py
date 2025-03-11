@@ -13,14 +13,13 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         sample = sys.argv[1]
     else:
-        sample = "I've coded a program and saved the group a lot of time."
+        sample = "I've trained the model and used the data"
     classifier = pipeline(
         "text-classification", model="dnttestmee/starclass_modernbert"
     )
-    print(sample)
 
     output = classifier(sample)
-
+    print(f"Input: {sample}")
     print(f"Output: {labels[str(output[0]['label'])]}")
     print(f"Score: {output[0]['score']}")
 # FOR MULTIPLE SENTENCES

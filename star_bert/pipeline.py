@@ -12,7 +12,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         sample = sys.argv[1]
     else:
-        sample = "I've trained the model"
+        sample = "I've trained the model and used the data"
     classifier = pipeline("text-classification", model="dnttestmee/starclass_bert")
     print(f"Input: {sample}")
 
